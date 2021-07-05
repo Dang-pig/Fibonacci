@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fibonacci</title>
+</head>
+
+<body>
+    <fieldset>
+    <legend>Fibonacci numbers!</legend>
+    Type the number of fibonacci number you want to write:<input id="n" oninput="w()" type="number">
+    <p id="res"></p>
+    <script>
+        function w() {
+            document.getElementById("res").innerText=""
+            let n = parseInt(document.getElementById("n").value)
+            let a = 0
+            let b = 1
+            let c = 1
+            let num = 0
+            document.getElementById("res").innerText += "0; "
+            while (num < (n - 1)) {
+                document.getElementById("res").innerText += c + "; "
+                c = Number(a) + Number(b)
+                a = b
+                b = c
+                num++
+                console.log(a, b)
+            }
+        }
+    </script>
+    </fieldset>
+</body>
+</html>
+    <!--<button onclick="w()">Write all the numbers!</button>>
